@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Popup styling */
+.popup {
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    width: 80%; /* Responsif, lebar kotak akan 80% dari layar */
+    max-width: 400px; /* Batas lebar maksimum untuk layar besar */
+}
+
+#question {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    width: 100%; /* Tombol memenuhi lebar pada layar kecil */
+    max-width: 150px; /* Batas lebar maksimal pada layar besar */
+}
+
+#yesBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#noBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#yesBtn:hover {
+    background-color: #45a049;
+}
+
+#noBtn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsiveness: Media queries for small screens */
+@media only screen and (max-width: 600px) {
+    .popup {
+        padding: 20px;
+        width: 90%; /* Lebih kecil pada layar kecil */
+    }
+
+    #question {
+        font-size: 16px; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsiveness: Media queries for larger screens */
+@media only screen and (min-width: 1200px) {
+    .popup {
+        padding: 40px;
+        width: 400px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 14px 30px;
+    }
+}
